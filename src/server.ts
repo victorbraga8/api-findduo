@@ -11,6 +11,11 @@ const prisma = new PrismaClient({
   log: ['query']
 });
 
+
+app.get("/", (req,res)=>{
+  res.json({msg:"Rodando"});
+})
+
 app.get('/games', async (req,res)=>{
   const games = await prisma.game.findMany({
     include:{
