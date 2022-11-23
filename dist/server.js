@@ -22,6 +22,9 @@ app.use((0, cors_1.default)());
 const prisma = new client_1.PrismaClient({
     log: ['query']
 });
+app.get("/", (req, res) => {
+    res.json({ msg: "Rodando" });
+});
 app.get('/games', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const games = yield prisma.game.findMany({
         include: {
