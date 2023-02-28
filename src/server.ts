@@ -2,19 +2,21 @@ import express from 'express';
 import cors from 'cors';
 // import {PrismaClient} from '@prisma/client';
 import { converteHora, converteMinuto } from './utils/utils';
-
+import { router } from './routes';
 const app = express();
+
 app.use(express.json());
 app.use(cors());
+app.use(router);
 
 // const prisma = new PrismaClient({
 //   log: ['query']
 // });
 
 
-app.get("/", (req,res)=>{
-  res.json({msg:"Rodando Atualizado Novo Teste"});
-})
+// app.get("/", (req,res)=>{
+//   res.json({msg:"Rodando Atualizado Novo Teste"});
+// })
 
 // app.get('/games', async (req,res)=>{
 //   const games = await prisma.game.findMany({
