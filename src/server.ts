@@ -13,7 +13,7 @@ app.use(cors());
 
 
 app.get("/", (req,res)=>{
-  res.json({msg:"Rodando Atualizado"});
+  res.json({msg:"Rodando Atualizado Novo Teste"});
 })
 
 // app.get('/games', async (req,res)=>{
