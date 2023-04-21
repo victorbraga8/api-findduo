@@ -3,14 +3,14 @@ import cors from 'cors';
 import * as dotenv from 'dotenv';
 import {PrismaClient} from '@prisma/client';
 import { converteHora, converteMinuto } from './utils/utils';
-import { router } from './routes';
+// import { router } from './routes';
 
 dotenv.config();
 const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(router);
+// app.use(router);
 
 const prisma = new PrismaClient({
   log: ['query']
