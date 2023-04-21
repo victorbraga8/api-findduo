@@ -43,7 +43,7 @@ app.post('/games/:id/ads', async (req,res)=>{
       name: body.name,
       yearsPlaying: body.yearsPlaying,
       discord: body.discord,
-      weekDays: body.weekDays.join(','),
+      weekDays: body.weekDays,
       hourStart: converteHora(body.hourStart),
       hourEnd: converteHora(body.hourEnd),
       useVoiceChannel: body.useVoiceChannel,
