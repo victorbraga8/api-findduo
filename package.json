@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
     "dev": "tsnd --exit-child src/server.ts",
-    "start": "node dist/server.js",
-    "vercel-build": "npx tsc"
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
