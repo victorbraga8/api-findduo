@@ -36,7 +36,7 @@ app.get("/games", async (req, res) => {
 app.post("/games/:id/ads", async (req, res) => {
   const gameId = req.params.id;
   const body: any = req.body;
-  // console.log(req.body);
+  console.log(req.body);
   // console.log(body.weekDays);
   // console.log(typeof body.weekDays);
   const ad = await prisma.ad.create({
