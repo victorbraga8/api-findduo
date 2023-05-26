@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import * as dotenv from "dotenv";
 import { PrismaClient } from "@prisma/client";
-import { converteHora, converteMinuto, addComma } from "./utils/utils";
+import { converteHora, converteMinuto, formatWeekDays } from "./utils/utils";
 // import { router } from './routes';
 
 dotenv.config();
@@ -45,7 +45,7 @@ app.post("/games/:id/ads", async (req, res) => {
       name: body.name,
       yearsPlaying: body.yearsPlaying,
       discord: body.discord,
-      weekDays: addComma(body.weekDays),
+      weekDays: formatWeekDays(body.weekDays),
       // weekDays: "2,3",
       hourStart: converteHora(body.hourStart),
       hourEnd: converteHora(body.hourEnd),

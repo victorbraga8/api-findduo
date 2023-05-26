@@ -10,16 +10,15 @@ export function converteMinuto(minutos: number) {
   return `${String(hora).padStart(2, "0")}:${String(minuto).padStart(2, "0")}`;
 }
 
-export function addComma(str: string) {
-  str = str.replace(/^\s+|\s+$/g, "");
-  console.log(str);
-  var result = "";
-  for (var i = 0; i < str.length; i++) {
-    if (i === str.length - 1) {
-      result += str[i];
-    } else {
-      result += str[i] + ",";
-    }
+export function formatWeekDays(array: string) {
+  if (array.length === 0) return "";
+
+  let resultado = "";
+
+  for (let i = 0; i < array.length; i++) {
+    resultado += array[i] + ",";
   }
-  return result;
+
+  resultado = resultado.slice(0, -1);
+  return resultado;
 }
